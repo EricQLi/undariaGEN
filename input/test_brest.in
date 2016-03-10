@@ -1,0 +1,131 @@
+Eng_width			   	  514
+Eng_height			        482
+Eng_cellSize              1.0
+Eng_nbLoops				     51000
+Eng_displayPeriod	        100
+Eng_graphPeriod           730
+Eng_sampleLoop            365
+Eng_worldType             3
+Eng_nbRuns				     1
+Eng_mobility              0
+CUDA_loops                0
+
+Org_initialOrganisms	     8000
+Org_maxOrganisms		     2.5E+05
+Org_startStock            6.7E-05
+Org_probFertilise         1.0E-04
+Org_macroSize             0.17
+Org_meanDepth             1.0
+Org_photo_alpha           0.3
+
+Spor_halfLifeHr           24
+Spor_sporeRel 			     2.0E+07
+Spor_totalSpore           1.0E+10 
+Spor_probGerminate        5.0E-09
+Spor_diffusionRate		  0.15
+Spor_diffusLoops          5
+
+Env_cos_units             365
+Env_tempAmp               4.14
+Env_temp_c                229.99
+Env_temp_d                13.33
+Env_solarAmp              9.05
+Env_solar_c               169.59
+Env_solar_d               11.36
+Env_DL_Amp                3.77
+Env_DL_c                  171.135
+Env_DL_d                  12.25
+Env_kdPAR                 0.4           
+
+LBE_initRho               1.0
+LBE_initUvelocity         0.0
+LBE_initVvelocity         0.0
+LBE_LBEomega              1.8
+LBE_uForce                0.9
+LBE_obstXPos              32 
+LBE_obstYPos              19
+LBE_obstLength            5 
+LBE_obstWidth             1
+LBE_loopAddObst           0
+LBE_loopRemoveObst        -1
+LBE_rankAddObst           -1
+LBE_ratio_hH              1.0
+
+Bait_initialDistrib       0
+
+
+********************************************************************************
+Notes:
+	Plate size restricted to 65536x65536
+	'cellSize' unused
+   initDistrib:
+      0 - randomly distribute
+      1 - evenly distribute
+	*each loop represents 1 hour.	
+	WorldType: 1=OPEN, 2=CLOSED, 3=OPEN EAST/WEST, 4=OPEN NORTH/SOUTH, 5=OPEN W, 6=OPEN E
+	
+Input parameters [Explanation, default input value]:
+
+   Eng_width			   	  [width of environment, 514]
+   Eng_height			        [height of environment, 482]
+   Eng_cellSize              [size of environment cell (in metres), 1.0]
+   Eng_nbLoops				     [Number of simulation loops, 51000]
+   Eng_displayPeriod	        [Update X window display every x loops, 100]
+   Eng_graphPeriod           [Data output to text file every x loops, 730]
+   Eng_sampleLoop            [Loop at which first data output occurs, 365]
+   Eng_worldType             [Boundary conditions: 1=OPEN, 2=CLOSED, 
+                              3=OPEN EAST/WEST, 3]
+   Eng_nbRuns				     [No. of iterations to repeat simulation, 1]
+   Eng_mobility              [Boolean - Specify if agents are mobile, 0]
+   CUDA_loops                [CUDA-specific code, 0=Non-CUDA, 0]
+
+   Org_initialOrganisms	     [Initial no. of gametophyte agents, 8000]
+   Org_maxOrganisms		     [Max no. of agents supported at any one time, 2.5E+05]
+   Org_startStock            [Mean size of new sporophyte agent (relative to 
+                              maturity: 20/300000 microns), 6.7E-05]
+   Org_probFertilise         [Prob. of fertilisation of gamete, 1.0E-04]
+   Org_macroSize             [Size at which sporophyte classed as "new recruit" 
+                              (5/30 cm)), 0.17]
+   Org_meanDepth             [Depth below water surface of agents, 1.0]
+   Org_photo_alpha           [Reduction in photosynthetic efficiency representing 
+                              community structure, 0.3]
+
+   Spor_halfLifeHr           [Half-life for active spore particles in water 
+                              column, 24]
+   Spor_sporeRel 			     [No. spores released by sporophyte per time step, 
+                              2.0E+07]
+   Spor_totalSpore           [Total spores released per sporophyte agent, 1.0E+10] 
+   Spor_probGerminate        [Prob. spore fixation and formation of gametophyte 
+                              agent, 5.0E-09]
+   Spor_diffusionRate		  [Diffusion coefficient - Fick's first law of 
+                              diffusion, 0.15]
+   Spor_diffusLoops          [Call diffusion algorithm every x loops, 5]
+
+   Env_cos_units             [Units for Cos functions, default=days in year, 365]
+   Env_tempAmp               [Temperature Cos func: amplitude, 4.14]
+   Env_temp_c                [Temperature Cos func: x-axis transform, 229.99]
+   Env_temp_d                [Temperature Cos func: mean, 13.33]
+   Env_solarAmp              [Solar radiation Cos func: amplitude, 9.05]
+   Env_solar_c               [Solar radiation Cos func: x-axis transform, 169.59]
+   Env_solar_d               [Solar radiation Cos func: mean, 11.36]
+   Env_DL_Amp                [Day length Cos func: amplitude, 3.77]
+   Env_DL_c                  [Day length Cos func: x-axis transform, 171.135]
+   Env_DL_d                  [Day length Cos func: mean, 12.25]
+   Env_kdPAR                 [Light attenuation coefficient in water, 0.4]           
+
+   [Lattice Boltzmann Equation input parameters (unused) - work-in-progress]
+   LBE_initRho               1.0
+   LBE_initUvelocity         0.0
+   LBE_initVvelocity         0.0
+   LBE_LBEomega              1.8
+   LBE_uForce                0.9
+   LBE_obstXPos              32 
+   LBE_obstYPos              19
+   LBE_obstLength            5 
+   LBE_obstWidth             1
+   LBE_loopAddObst           0
+   LBE_loopRemoveObst        -1
+   LBE_rankAddObst           -1
+   LBE_ratio_hH              1.0
+      
+********************************************************************************
