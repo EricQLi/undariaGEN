@@ -33,9 +33,9 @@ To compile:
 To run:
    - mpiexec -n 4 ./bin/undariagen [./input/inFile1.in] [./input/inFile2.in]
 
-Example run:
-   - mpiexec -n 4 ./bin/undariagen ./input/test_brest.in ./input/port_edit514_482.in
-
 Input files:
    - inFile1.in = input parameters (see Sec. 3) [test_brest.in]
    - inFile2.in = map of substrate types (imageJ xy coords) [port_edit514_482.in]
+   
+Example run:
+   - mpiexec -n 4 ./bin/undariagen ./input/test_brest.in ./input/port_edit514_482.in
