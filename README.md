@@ -6,21 +6,29 @@ This is a individual-based model of growth and dynamics of the invasive macroalg
 The model framework can be used to explicitly represent complex spatial and temporal patterns of invasion in order to be able to make quantitative predictions about the impact of these factors on invasion dynamics of U. pinnatifida. This would be a useful tool for making risk assessments of invasion potential under different environmental conditions and for choosing optimal control strategies for cost-effective management.
 
 
-#1. Compilation
+#1. Dependencies
+ 
+- MPICH (Implementation of the MPI Message Passing Interface):
+   - http://www.mpich.org/
+   - Ubuntu: install mpich and libmpich-dev packages
+- GNU Scientific Library (GSL):
+   - http://www.gnu.org/software/gsl/
+   - Ubuntu: install gsl-bin and libgsl0-dev packages
 
-Requires: 
-   - MPICH (Implementation of the MPI Message Passing Interface):
-      - http://www.mpich.org/
-      - Ubuntu: install mpich and libmpich-dev packages
-   - GNU Scientific Library (GSL):
-      - http://www.gnu.org/software/gsl/
-      - Ubuntu: install gsl-bin and libgsl0-dev packages
+
+#2. Compilation
 
 To compile:
-   - make
+   - create bin and results sub-folders to store binary and output files respectively:
+      - mkdir ./bin
+      - mkdir ./results
+   - to remove existing binary files:
+      - make clean
+   - compile (using Makefile system):
+      - make
+ 
    
-
-#2. Execution
+#3. Execution
 
 To run:
    - mpiexec -n 4 ./bin/undariagen [./input/inFile1.in] [./input/inFile2.in]
